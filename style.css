@@ -1,0 +1,281 @@
+@font-face {
+    font-family: "JosefinSansLight";
+    src: url('/fonts/static/JosefinSans-Light.ttf');
+}
+
+@font-face {
+    font-family: "JosefinSansRegular";
+    src: url('/fonts/static/JosefinSans-Regular.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+}
+
+.header{
+    height: auto;
+    width: 100%;
+    padding: 1.5em;
+    
+}
+
+.header img{
+    width: 25vw;  
+}
+
+section.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero{
+    width: 100%;
+    height: 15em;
+    background-image: url(/images/hero-mobile.jpg);
+    background-size: cover;
+}
+
+.container .article{
+    width: 100%;
+    padding: 0 2em;
+    
+}
+
+.container .article h1{
+    margin-top: 1.5em;
+    text-align: center;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+    font-family: 'JosefinSansLight', sans-serif;
+    
+}
+
+.container .article h1 span{
+    font-family: 'JosefinSansRegular', sans-serif;
+    color: hsl(0, 6%, 24%);
+    
+}
+
+.container .article p{
+    margin: 1em 2em;
+    font-size: 0.7em;
+    text-align: center;
+    color: hsl(0, 36%, 70%);
+    line-height: 1.6;
+}
+
+.container .article .form{
+    
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 1.5em;
+}
+
+.container .article .form .input{
+    position: absolute;
+    width: 100%;
+    outline: none;
+    border: 1px solid hsl(0, 36%, 70%);
+    height: 100%;
+    border-radius: 50px;
+    padding-left: 30px;
+    font-family: 'JosefinSansRegular', sans-serif;
+
+}
+
+.container .article .form .input::placeholder{
+    color: hsl(0, 36%, 70%);
+    font-family: 'JosefinSansRegular', sans-serif;
+    opacity: 0.5;
+}
+
+.container .article .form button{
+    position: absolute;
+    right: 0;
+    width: 65px;
+    height: 100%;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    
+}
+
+.container .article .form .icon-error{
+    display: inline-block;
+    position: absolute;
+    right: 90px;
+    top: 25%;
+    display: none;
+}
+
+.container .article .form .text-error{
+    position: absolute;
+    left: 30px;
+    top: 40px;
+    font-size: 0.7em;
+    display: none;
+}
+
+.container .article form.error .icon-error,
+.container .article form.error .text-error{
+    display: block;
+}
+
+.container .article form.error .input{
+    border: 2px solid red;
+}
+
+.footer{
+    text-align: center;
+    font-family: 'JosefinSansRegular', sans-serif;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    padding: 25px;
+    color: white;
+}
+
+.footer a{
+    color: rgb(153, 142, 211);
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 600px){
+    .header{
+        padding: 2.5em;  
+    }
+    
+    .hero{
+        height: 30em;
+    }
+    
+    .container .article{
+        padding: 0 3em;
+    }
+    
+    .container .article h1{
+        margin-top: 2em;
+        font-size: 4em;
+        letter-spacing: 0.5em;
+    }
+       
+    .container .article p{
+        margin: 2em 3em;
+        font-size: 1.5em;
+        line-height: 2;
+    }
+    
+    .container .article .form{
+        height: 60px;
+        max-width: 450px;
+        margin-bottom: 3em;
+    }
+    
+    .container .article .form .input{
+        padding-left: 50px;
+    }
+    
+    .container .article .form .input::placeholder{
+        font-size: 1.7em;
+    }
+    
+    .container .article .form button{
+        width: 100px;
+
+    }
+    
+    .container .article .form .icon-error{
+        right: 120px;
+        display: none;
+    }
+    
+    .container .article .form .text-error{
+        top: 60px;
+        font-size: 1em;
+        display: none;
+    }
+    
+    .container .article .form.error .icon-error,
+    .container .article .form.error .text-error{
+        display: block;
+    }
+    
+    .footer{
+        font-size: 1.3em;
+        margin-top: 1em;
+        padding: 50px;
+    }
+
+    @media only screen and (min-width: 850px){
+        .header{
+            position: absolute;
+        }
+
+        .header img{
+            width: 23vw;
+            padding-left: 10%;
+        }
+
+        section.container{
+            flex-direction: row-reverse;
+        }
+
+        .hero{
+            width: 80%;
+            height: 100vh;
+            background-image: url(/images/hero-desktop.jpg);
+        }
+
+        .container .article{
+            padding-left: 10%;
+        }
+        
+        .container .article h1{
+            margin-top: 1.5em;
+            text-align: left;
+            font-size: 3.5em;
+            letter-spacing: 0.5em;
+        }
+        
+        .container .article p{
+            margin: 1em 5.5em 0 1em;
+            font-size: 1.2em;
+            text-align: left;
+        }
+        
+        .container .article .form{
+            margin-left: 0;
+        }
+        
+        .container .article .form button{
+            width: 100px;
+        }
+        
+        .container .article .form .icon-error{
+            right: 120px;
+        }
+        
+        .container .article .form .text-error{
+            top: 60px;
+            font-size: 1.2em;
+        }
+        
+        .footer{
+            padding: 40px;
+        }
+    }
+}
